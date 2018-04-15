@@ -266,6 +266,7 @@ section:first-of-type {
   border: 1px solid transparent;
   border-radius: 3px;
   padding: 4px;
+  cursor: pointer;
 }
 
 .navbar-toggler .navbar-toggler-icon {
