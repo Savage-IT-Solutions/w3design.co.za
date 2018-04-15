@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  padding: .75rem;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  text-align: center;
+  transition: all .3s ease-in-out;
+
+  &:focus,
+  &:hover {
+    color: $white;
+  }
+}
+
+.btn-block {
+  display: block;
+}
+
+
+.btn-lg {
+  padding: 1.25rem;
+}
+
+.btn-primary {
+  background-color: $primary;
+  border: 1px solid darken($primary, 8%);
+  color: $white;
+
+  &:focus,
+  &:hover {
+    background-color: darken($primary, 8%);
+  }
+}

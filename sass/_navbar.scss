@@ -1,0 +1,118 @@
+.navbar {
+  position: relative;
+  padding-bottom: .75rem;
+  padding-top: .75rem;
+}
+
+[class*=navbar-expand-],
+[class*=navbar-expand-] > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  display: block;
+  font-size: 125%;
+}
+
+.navbar-toggler {
+  display: block;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 4px;
+  
+  .navbar-toggler-icon {
+    display: inherit;
+    background-color: transparent;
+    color: $gray-600;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: $gray-800;
+    }
+
+    &::before {
+      font-family: 'Font Awesome 5 Free';
+      content: '\f0c9';
+      font-weight: 900;
+      font-size: 2.15rem;
+      font-variant: normal;
+      font-variant-ligatures: normal;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: none !important;
+  }
+}
+
+.navbar-expand-md .navbar-collapse {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: $primary;
+  z-index: 1000;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: block;
+    position: static;
+    background-color: transparent;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex-flow: row wrap;
+  }
+}
+
+.nav-item {
+  display: block;
+  padding: 1.5rem 4.5rem;
+  transition: all .4s ease-in-out;
+  color: $gray-600;
+
+  .nav-link {
+    display: block;
+    color: $white;
+    font-size: 115%;
+    font-weight: 500;
+
+    @media screen and (min-width: $breakpoint-md) {
+      color: inherit;
+      font-weight: 300;
+
+      &:focus,
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &:focus,
+    &:hover {
+      color: inherit;
+    }
+  }
+ 
+  @media screen and (min-width: $breakpoint-md) {
+    display: inline-block;
+    padding: .75rem;
+    color: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $success;
+    color: $white;
+  }  
+}
