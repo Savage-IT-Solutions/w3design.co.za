@@ -75,6 +75,24 @@ section:first-of-type {
   margin-top: 0;
 }
 
+@-webkit-keyframes primary-hover {
+  0% {
+    background-color: #0272BC;
+  }
+  100% {
+    background-color: #025a94;
+  }
+}
+
+@keyframes primary-hover {
+  0% {
+    background-color: #0272BC;
+  }
+  100% {
+    background-color: #025a94;
+  }
+}
+
 .btn {
   display: inline-block;
   padding: .75rem;
@@ -83,6 +101,10 @@ section:first-of-type {
   text-align: center;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+}
+
+.btn .fa {
+  position: relative;
 }
 
 .btn:focus, .btn:hover {
@@ -99,12 +121,16 @@ section:first-of-type {
 
 .btn-primary {
   background-color: #0272BC;
-  border: 1px solid #025a94;
   color: #fff;
 }
 
 .btn-primary:focus, .btn-primary:hover {
   background-color: #025a94;
+}
+
+.btn-alert {
+  background-color: #DA3949;
+  color: #fff;
 }
 
 .card-deck {

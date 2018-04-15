@@ -1,3 +1,8 @@
+@keyframes primary-hover {
+  0% {background-color: $primary}
+  100% {background-color: darken($primary, 8%)}
+
+}
 .btn {
   display: inline-block;
   padding: .75rem;
@@ -5,6 +10,10 @@
   border-radius: 3px;
   text-align: center;
   transition: all .3s ease-in-out;
+
+  .fa {
+    position: relative;
+  }
 
   &:focus,
   &:hover {
@@ -23,11 +32,15 @@
 
 .btn-primary {
   background-color: $primary;
-  border: 1px solid darken($primary, 8%);
   color: $white;
 
   &:focus,
   &:hover {
     background-color: darken($primary, 8%);
   }
+}
+
+.btn-danger {
+  background-color: $danger;
+  color: $white;
 }
